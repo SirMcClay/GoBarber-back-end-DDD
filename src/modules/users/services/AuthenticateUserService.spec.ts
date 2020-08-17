@@ -33,7 +33,7 @@ describe('AuthenticateUser', () => {
     expect(response.user).toEqual(user);
   });
 
-  it('should be able to authenticate with non existing user', async () => {
+  it('should not be able to authenticate with non existing user', async () => {
     const fakeUsersRepository = new FakeUsersRepository();
     const fakeHashProvider = new FakeHashProvider();
 
