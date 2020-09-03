@@ -46,10 +46,6 @@ class AuthenticateUserService {
 
     const { secret, expiresIn } = authConfig.jwt;
 
-    if (!secret) {
-      throw new AppError('Credenciais negadas.');
-    }
-
     const token = sign({}, secret, {
       subject: user.id,
       expiresIn,
