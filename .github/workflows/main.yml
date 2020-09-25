@@ -26,12 +26,12 @@ jobs:
       
       - name: Copy dist to Digital Ocean
         uses: appleboy/scp-action@master
-          with:
-            host: ${{ secrets.SSH_HOST }}
-            username: ${{ secrets.SSH_USER }}
-            key: ${{ secrets.SSH_KEY }}
-            port: ${{ secrets.SSH_PORT }}
-            source: "dist"
-            target: "teste"
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist"
+          target: "teste"
       
       
